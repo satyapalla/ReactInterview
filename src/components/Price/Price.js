@@ -13,10 +13,12 @@ export const Price = ({ product, showSpecialPrice = false }) => {
   
   useEffect(() => {
     if (product) {
-      function fetchSpecialPrice() {
+      async function fetchSpecialPrice() {
         // TODO: get data from slowApi (argument product.price)
         
         // setSpecialPrice(data);
+        let data = await slowApi(product.price)
+         setSpecialPrice(data);
       }
       
       fetchSpecialPrice();

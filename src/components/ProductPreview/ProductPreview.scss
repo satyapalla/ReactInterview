@@ -1,9 +1,18 @@
 .product-preview {
   padding: 10px;
   border: 1px solid #333;
-  max-width: 500px;
+  max-width: 450px;
 
   &-details {
     width: 300px;
+  }
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  img{
+    object-fit: contain;
+    width: 40%;
   }
 }
